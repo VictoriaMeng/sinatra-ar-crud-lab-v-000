@@ -33,6 +33,7 @@ class ApplicationController < Sinatra::Base
 
   get '/posts/:id/edit' do
     @post = Post.find(params['id'])
+    binding.pry
     erb :edit
   end
 
